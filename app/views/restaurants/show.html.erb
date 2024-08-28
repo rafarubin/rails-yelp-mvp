@@ -9,7 +9,16 @@
       <%= @restaurant.address %>
     </div>
   </div>
-
+  <div>
+    <p><strong>Reviews</strong></p>
+    <ul class="list-group">
+      <% @restaurant.reviews.each do |review| %>
+        <li clas="list-group-item"><%= review.content %></li>
+        <p> <strong>Rating: </strong> <%=  review.rating %></p>
+      <% end %>
+    </ul>
+  </div>
+    <%= link_to "Write a review", new_restaurant_review_path(@restaurant.id)  %>
   <div>
     <p>
     </p>
