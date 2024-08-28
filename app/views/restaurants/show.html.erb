@@ -1,7 +1,7 @@
 <h1>Restaurant</h1>
 
-<div>
-  <h1> <%= @restaurant.name %>  </h1>
+<div class="card-body bg-info-subtle w-75 mb-3 px-5">
+  <h3> <%= @restaurant.name %>  </h3>
 
 
   <div class="card w-50 mb-3">
@@ -19,6 +19,8 @@
     </ul>
   </div>
     <%= link_to "Write a review", new_restaurant_review_path(@restaurant.id)  %>
+    <br>
+    <%= link_to 'Back to list', restaurants_path %>
   <div>
     <p>
     </p>
@@ -26,6 +28,3 @@
   </div>
 
   </div>
-
-
-<%= link_to 'Back to list', restaurants_path %>
