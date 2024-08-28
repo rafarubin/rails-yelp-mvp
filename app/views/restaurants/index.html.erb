@@ -1,0 +1,17 @@
+<h1>Restaurant List</h1>
+
+<div>
+  <ul>
+    <% @restaurant.each do |rest| %>
+    <li>
+      <%= link_to restaurant_path(rest.id) do %>
+        <strong>
+          <%= rest.name %>
+        </strong>
+
+      <% end %>
+    </li>
+
+  <% end %>
+  </ul>
+</div>
